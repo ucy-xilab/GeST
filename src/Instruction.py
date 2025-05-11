@@ -17,19 +17,21 @@ class Instruction(object):
     classdocs
     '''
 
-
-    def __init__(self,name,ins_type,numOfOperands,operands=[],format="op1,op2,op3",toggleable="False"):
+    def __init__(self, name, ins_type, numOfOperands, numOfInstructions, operands=[], format="op1,op2,op3",
+                 toggleable="False"):
         '''
         Constructor
         '''
         self.name = name;
         self.ins_type = ins_type;
         self.operands = operands;
-        self.format=format;
-        self.format=self.format.replace("\\n","\n"); #replace double backslashes with one backslash to make sure atomic sequences work. for some reason the xml parsing by default ads a backslash to escape characters
-        self.format=self.format.replace("\\t","\t");
+        self.format = format;
+        self.format = self.format.replace("\\n",
+                                          "\n");  # replace double backslashes with one backslash to make sure atomic sequences work. for some reason the xml parsing by default ads a backslash to escape characters
+        self.format = self.format.replace("\\t", "\t");
         self.numOfOperands = numOfOperands;
-        self.toggleable=toggleable;
+        self.numOfInstructions = numOfInstructions;
+        self.toggleable = toggleable;
         
     def copy(self):
         return copy.deepcopy(self);
