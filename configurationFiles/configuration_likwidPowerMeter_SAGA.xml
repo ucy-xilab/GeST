@@ -72,7 +72,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 <!-- end of general GA inputs -->
     <!--Input/output dir-->
     <dirToSaveResults
-        value="/Users/panteleimonas/Desktop/GeST-work/SAGA/Results/"
+        value="/Users/admin/Desktop/GeST-SAGA/Results/"
     /> 
       <!-- The code sequeneces will be save in ascii format in .txt files in the specified dir. The name format of each file goes like this populationNumber_individualsIdNumber_fitnessValue_measurement1_.... Also a dir which is named
     after the date/time of the start of the run is created. This dir will contain each population saved in .pkl file and the rand state (also in .pkl format) at each population. This dir can be used as seed dir in case you want to continue an unfinished run. 
@@ -86,7 +86,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
     
   
     <compilationDir 
-      value="/Users/panteleimonas/Desktop/GeST-work/SAGA/assembly_compilation/"
+      value="/Users/admin/Desktop/GeST-SAGA/assembly_compilation/"
       />
          <!-- Dir where the compilation code is located .. IMPORTANT the main_original.s must always contain a line #loop_code. At that line
       the framework will bring in the generated code sequence.. In main_original.s and startup_original.s you can place all the code that you want to be common between each individual e.g. memory and register initialization... 
