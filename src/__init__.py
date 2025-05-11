@@ -16,15 +16,14 @@ from Individual import Individual
 import sys
 
 
-'''1st argument full path to configuration file.'''   
+'''1st argument full path to configuration file.'''
 
 rand = Random ();  #to use a fixed seed give an int argument
-algorithm = Algorithm (sys.argv[1],rand) 
+algorithm = Algorithm (sys.argv[1],rand)
 algorithm.createInitialPopulation();
 algorithm.measurePopulation();
 while algorithm.areWeDone()!= True:
     algorithm.evolvePopulation()
     algorithm.measurePopulation()
-fittest=algorithm.getFittest();
-print ("Fittest individual is:\n " + fittest.__str__() + "with measurement equal to "+str(fittest.getMeasurement()));
-
+fittest=algorithm.population.getFittest();
+print ("Fittest individual is:\n " + fittest.__str__() + "with measurement equal to "+str(fittest.getMeasurements()));
