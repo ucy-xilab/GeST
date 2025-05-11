@@ -11,6 +11,8 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 
 import operator
 import pickle
+import random
+
 
 class Population(object):
     '''
@@ -20,8 +22,12 @@ class Population(object):
 
     def __init__(self,individuals=[]):
         self.individuals=individuals;
+        self.population_type = "Normal"
         
-    
+    def setPopulationType(self, type):
+        self.population_type = type
+
+
     def getIndividual(self,index):
         return self.individuals[index];
         
@@ -59,7 +65,10 @@ class Population(object):
     def sortByWeakestToFitess(self):
         self.individuals.sort(key=operator.attrgetter('fitness'))
         #sorted(self.individuals,key=lambda obj: obj.fitness, reverse=True);
-    
+
+    def shaffleIndividuals(self):
+        random.shuffle(self.individuals)
+
     def saveIndividual (self,index,individual):
         self.individuals[index]=individual;
         
@@ -76,7 +85,7 @@ class Population(object):
         for i in range(0,half):
             newList.append(self.individuals[i]);
         self.individuals=newList;
-        
+
         
     def pickle(self,filename):
         pickle.dump(self, filename);
