@@ -39,6 +39,9 @@ class Individual(object):
     
     def getInstructions(self):
         return self.sequence;
+
+    def setInstructions(self, sequence):
+        self.sequence = sequence
     
     def fixUnconditionalBranchLabels(self):
         automatically_incremented={};
