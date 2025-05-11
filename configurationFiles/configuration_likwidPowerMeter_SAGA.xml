@@ -86,7 +86,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
     
   
     <compilationDir 
-      value="/Users/admin/Desktop/GeST-SAGA/assembly_compilation/"
+      value="/Users/admin/Desktop/GeST-SAGA/assembly_compilation_x86_gcc/"
       />
          <!-- Dir where the compilation code is located .. IMPORTANT the main_original.s must always contain a line #loop_code. At that line
       the framework will bring in the generated code sequence.. In main_original.s and startup_original.s you can place all the code that you want to be common between each individual e.g. memory and register initialization... 
